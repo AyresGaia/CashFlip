@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nightlight CashFlip</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="convert.svg">
+</head>
+<body>
+  <main class="converter" role="region" aria-label="Currency converter UI">
+    <header class="header">
+      <div class="logo" aria-hidden="true"></div>
+      <div>
+        <h1>Nightlight Converter</h1>
+      </div>
+    </header>
+
+    <section class="grid" aria-label="Conversion inputs">
+      <div class="field" id="amount-field">
+        <label class="label" for="amount">Amount</label>
+        <input id="amount" class="input" type="number" placeholder="Enter amount" inputmode="decimal" />
+      </div>
+
+      <div class="field" id="from-field">
+        <img src="https://flagsapi.com/IN/shiny/64.png" alt="">
+        <label class="label" for="from">From</label>
+        <select id="from" class="select">
+        </select>
+      </div>
+
+      <div class="field" id="to-field">
+        <img src="https://flagsapi.com/US/shiny/64.png" alt="">
+        <label class="label" for="to">To</label>
+        <select id="to" class="select">
+        </select>
+      </div>
+    </section>
+
+    <div class="swap" aria-hidden="true">
+      <span>• • •</span>
+      <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+      <span>• • •</span>
+    </div>
+
+    <div class="actions" aria-label="Actions">
+      <button class="btn" type="button" aria-disabled="true" id="change-btn">Convert</button>
+      <button class="btn" type="button" aria-disabled="true" id="swap-btn">Swap</button>
+      <button class="btn" type="button" aria-disabled="true" id="clear-btn">Clear</button>
+    </div>
+
+    <div class="result" aria-live="polite">
+      <div class="amount" id="result">—</div>
+      <div class="hint">Result shows here</div>
+    </div>
+
+  </main>
+  <script src="currencyName.js"></script>
+  <script src="codes.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
